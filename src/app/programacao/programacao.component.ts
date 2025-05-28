@@ -1,25 +1,37 @@
 import { Component } from '@angular/core';
-import { Evento } from '../models/evento.js';
+import { CommonModule } from '@angular/common';
+import { EventoCardComponent } from '../evento-card/evento-card.component';
+import { HoverBorderDirective } from '../shared/directives/hover-border.directive';
+
+interface Evento {
+  id: number;
+  titulo: string;
+  data: string;
+  horario: string;
+  local: string;
+}
 
 @Component({
   selector: 'app-programacao',
+  standalone: true,
+  imports: [CommonModule, EventoCardComponent, HoverBorderDirective],
   templateUrl: './programacao.component.html',
   styleUrls: ['./programacao.component.css']
 })
 export class ProgramacaoComponent {
   eventos: Evento[] = [
-    { id: 1, titulo: 'Kick-off', data: '26 de maio', horario: '19H00', local: 'ONLINE' }
+    {
+      id: 1,
+      titulo: 'Kick-off',
+      data: '26 de maio',
+      horario: '19H00',
+      local: 'ONLINE'
+    }
   ];
 
-  inscricoes: number[] = [];
+  eventoInscrito: number | null = null;
 
-  inscrever(id: number) {
-    if (!this.inscricoes.includes(id)) {
-      this.inscricoes.push(id);
-    }
-  }
-
-  isInscrito(id: number): boolean {
-    return this.inscricoes.includes(id);
+  participar(evento: Evento) {
+    this.eventoInscrito = evento.id;
   }
 }

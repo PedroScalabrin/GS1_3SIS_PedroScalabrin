@@ -1,7 +1,10 @@
 import { Component, Input } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-evento-card',
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './evento-card.component.html',
   styleUrls: ['./evento-card.component.css']
 })

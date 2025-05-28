@@ -6,7 +6,7 @@ import { ProgramacaoComponent } from './programacao/programacao.component';
 import { GiftsComponent } from './gifts/gifts.component';
 import { ParceirosComponent } from './parceiros/parceiros.component';
 
-const routes: Routes = [
+export const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'inspiracao', component: InspiracaoComponent },
   { path: 'programacao', component: ProgramacaoComponent },

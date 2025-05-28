@@ -1,11 +1,15 @@
 <h1>{{ titulo }}</h1>
 
-<p *ngIf="mostrarDescricao">{{ descricao }}</p>
+@if (mostrarDescricao) {
+  <p>{{ descricao }}</p>
+}
 <p>Data do Evento: {{ dataEvento }}</p>
 
 <h3>Destaques:</h3>
 <ul>
-  <li *ngFor="let destaque of destaques">{{ destaque }}</li>
+  @for (destaque of destaques; track destaque) {
+    <li>{{ destaque }}</li>
+  }
 </ul>
 
 <button (click)="mostrarDescricao = !mostrarDescricao">

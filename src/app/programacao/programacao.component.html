@@ -1,6 +1,6 @@
 <h2>Programação</h2>
 
-<div *ngFor="let evento of eventos">
+@for (evento of eventos; track evento.id) {
   <div class="evento-card" [appHoverBorder]="'#FF5100'">
     <app-evento-card
       [titulo]="evento.titulo"
@@ -11,8 +11,10 @@
 
     <button (click)="participar(evento)">Participar</button>
 
-    <p *ngIf="eventoInscrito === evento.id">
-      Você se inscreveu no evento: {{ evento.titulo }}
-    </p>
+    @if (eventoInscrito === evento.id) {
+      <p class="inscricao-mensagem">
+        Você se inscreveu no evento: {{ evento.titulo }}
+      </p>
+    }
   </div>
-</div>
+}

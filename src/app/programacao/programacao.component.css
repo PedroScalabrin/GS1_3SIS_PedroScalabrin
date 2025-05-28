@@ -1,0 +1,30 @@
+.evento-card {
+  max-width: 600px;
+  margin: 2rem auto;
+  position: relative;
+}
+
+button {
+  background-color: #FF5100;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 1rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #cc4000;
+}
+
+.inscricao-mensagem {
+  color: #28a745;
+  margin-top: 1rem;
+  padding: 0.5rem;
+  background-color: #e8f5e9;
+  border-radius: 4px;
+  text-align: center;
+}
