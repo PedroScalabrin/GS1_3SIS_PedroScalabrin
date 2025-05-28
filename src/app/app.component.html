@@ -1,10 +1,14 @@
-<app-header></app-header>
-<nav>
-  <a routerLink="/home">Home</a>
-  <a routerLink="/inspiracao">Inspiração</a>
-  <a routerLink="/programacao">Programação</a>
-  <a routerLink="/gifts">Gifts</a>
-  <a routerLink="/parceiros">Parceiros</a>
-</nav>
-<router-outlet></router-outlet>
-<app-footer></app-footer>
+<div class="app-container">
+  <app-header></app-header>
+  <nav>
+    <a routerLink="/home" routerLinkActive="active">Home</a>
+    <a routerLink="/inspiracao" routerLinkActive="active">Inspiração</a>
+    <a routerLink="/programacao" routerLinkActive="active">Programação</a>
+    <a routerLink="/gifts" routerLinkActive="active">Gifts</a>
+    <a routerLink="/parceiros" routerLinkActive="active">Parceiros</a>
+  </nav>
+  <div class="content">
+    <router-outlet></router-outlet>
+  </div>
+  <app-footer></app-footer>
+</div>

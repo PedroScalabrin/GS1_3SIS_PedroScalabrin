@@ -1,23 +1,62 @@
 .evento-card {
-  background-color: #ffffff;
-  border-radius: 8px;
-  padding: 1.5rem;
-  margin: 1rem 0;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  border-radius: var(--border-radius);
+  padding: 0;
+  margin: 0;
+  transition: var(--transition);
+  overflow: hidden;
 }
 
 .evento-card h3 {
-  color: #333;
-  margin: 0 0 1rem 0;
+  color: var(--secondary-color); /* Preto FIAP */
+  margin: 0 0 1.25rem 0;
   font-size: 1.5rem;
+  position: relative;
+  padding-bottom: 0.75rem;
+}
+
+.evento-card h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background-color: var(--primary-color); /* Vermelho FIAP */
+  border-radius: 2px;
+}
+
+.evento-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 0.75rem;
 }
 
 .evento-info p {
   margin: 0.5rem 0;
-  color: #666;
+  color: var(--text-light);
+  display: flex;
+  align-items: center;
+}
+
+.evento-info p:before {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background-color: var(--primary-color); /* Vermelho FIAP */
+  border-radius: 50%;
+  margin-right: 0.5rem;
 }
 
 .evento-info strong {
-  color: #333;
+  color: var(--secondary-color); /* Preto FIAP */
   margin-right: 0.5rem;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .evento-info {
+    grid-template-columns: 1fr;
+  }
 }

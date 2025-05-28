@@ -1,17 +1,26 @@
-<h1>{{ titulo }}</h1>
+<section class="home-section">
+  <div class="home-header">
+    <h1>{{ titulo }}</h1>
+  </div>
 
-@if (mostrarDescricao) {
-  <p>{{ descricao }}</p>
-}
-<p>Data do Evento: {{ dataEvento }}</p>
-
-<h3>Destaques:</h3>
-<ul>
-  @for (destaque of destaques; track destaque) {
-    <li>{{ destaque }}</li>
+  @if (mostrarDescricao) {
+    <div class="description">
+      <p>{{ descricao }}</p>
+    </div>
   }
-</ul>
 
-<button (click)="mostrarDescricao = !mostrarDescricao">
-  {{ mostrarDescricao ? 'Ocultar' : 'Mostrar' }} Descrição
-</button>
+  <p class="event-date">Data do Evento: {{ dataEvento }}</p>
+
+  <div class="highlights-section">
+    <h3>Destaques:</h3>
+    <ul class="highlights-list">
+      @for (destaque of destaques; track destaque) {
+        <li>{{ destaque }}</li>
+      }
+    </ul>
+  </div>
+
+  <button class="toggle-btn" (click)="mostrarDescricao = !mostrarDescricao">
+    {{ mostrarDescricao ? 'Ocultar' : 'Mostrar' }} Descrição
+  </button>
+</section>

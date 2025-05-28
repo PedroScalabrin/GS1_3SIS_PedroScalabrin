@@ -1,0 +1,129 @@
+.home-section {
+  padding: 3rem 0;
+}
+
+.home-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.home-header h1 {
+  font-size: 3rem;
+  color: var(--secondary-color); /* Preto FIAP */
+  margin-bottom: 1rem;
+  position: relative;
+  display: inline-block;
+}
+
+.home-header h1::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background-color: var(--primary-color); /* Vermelho FIAP */
+  border-radius: 2px;
+}
+
+.event-date {
+  font-size: 1.2rem;
+  color: var(--primary-color); /* Vermelho FIAP */
+  font-weight: 500;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.description {
+  background-color: white;
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  margin-bottom: 2rem;
+  line-height: 1.8;
+  font-size: 1.1rem;
+  color: var(--text-color);
+  text-align: center;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.highlights-section {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.highlights-section h3 {
+  color: var(--secondary-color); /* Preto FIAP */
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+}
+
+.highlights-section h3::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background-color: var(--primary-color); /* Vermelho FIAP */
+  border-radius: 2px;
+}
+
+.highlights-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.highlights-list li {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  transition: var(--transition);
+  border-left: 4px solid var(--primary-color); /* Vermelho FIAP */
+}
+
+.highlights-list li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.toggle-btn {
+  display: block;
+  margin: 2rem auto;
+  background-color: var(--primary-color); /* Vermelho FIAP */
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--border-radius);
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.toggle-btn:hover {
+  background-color: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--box-shadow);
+}
+
+@media (max-width: 768px) {
+  .home-header h1 {
+    font-size: 2.5rem;
+  }
+
+  .highlights-list {
+    grid-template-columns: 1fr;
+  }
+}

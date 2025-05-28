@@ -1,20 +1,26 @@
-<h2>Programação</h2>
+<section class="programacao-section">
+  <div class="programacao-header">
+    <h2>Programação</h2>
+  </div>
 
-@for (evento of eventos; track evento.id) {
-  <div class="evento-card" [appHoverBorder]="'#FF5100'">
-    <app-evento-card
-      [titulo]="evento.titulo"
-      [data]="evento.data"
-      [horario]="evento.horario"
-      [local]="evento.local">
-    </app-evento-card>
+  <div class="eventos-grid">
+    @for (evento of eventos; track evento.id) {
+      <div class="evento-card" [appHoverBorder]="'#FF5100'">
+        <app-evento-card
+          [titulo]="evento.titulo"
+          [data]="evento.data"
+          [horario]="evento.horario"
+          [local]="evento.local">
+        </app-evento-card>
 
-    <button (click)="participar(evento)">Participar</button>
+        <button (click)="participar(evento)">Participar</button>
 
-    @if (eventoInscrito === evento.id) {
-      <p class="inscricao-mensagem">
-        Você se inscreveu no evento: {{ evento.titulo }}
-      </p>
+        @if (eventoInscrito === evento.id) {
+          <p class="inscricao-mensagem">
+            Você se inscreveu no evento: {{ evento.titulo }}
+          </p>
+        }
+      </div>
     }
   </div>
-}
+</section>

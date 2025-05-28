@@ -1,0 +1,88 @@
+.parceiros-section {
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.parceiros-header {
+  margin-bottom: 3rem;
+  position: relative;
+  display: inline-block;
+}
+
+.parceiros-header h2 {
+  font-size: 2.5rem;
+  color: var(--secondary-color); /* Preto FIAP */
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.parceiros-header h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70px;
+  height: 4px;
+  background-color: var(--primary-color); /* Vermelho FIAP */
+  border-radius: 2px;
+}
+
+.parceiros-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3rem;
+  margin-top: 2rem;
+}
+
+.parceiro-card {
+  background-color: white;
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  transition: var(--transition);
+  max-width: 300px;
+  width: 100%;
+  border-top: 4px solid var(--primary-color); /* Vermelho FIAP */
+}
+
+.parceiro-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.parceiro-logo {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 1.5rem;
+  transition: var(--transition);
+}
+
+.parceiro-logo:hover {
+  transform: scale(1.05);
+}
+
+.parceiro-info {
+  margin-top: 1rem;
+}
+
+.parceiro-info h3 {
+  color: var(--secondary-color); /* Preto FIAP */
+  margin-bottom: 0.5rem;
+}
+
+.parceiro-info p {
+  color: var(--text-light);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .parceiros-grid {
+    gap: 2rem;
+  }
+
+  .parceiro-card {
+    max-width: 100%;
+  }
+}
