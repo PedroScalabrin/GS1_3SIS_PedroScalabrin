@@ -1,12 +1,15 @@
 <div class="app-container">
   <app-header></app-header>
-  <nav>
-    <a routerLink="/home" routerLinkActive="active">Home</a>
-    <a routerLink="/inspiracao" routerLinkActive="active">Inspiração</a>
-    <a routerLink="/programacao" routerLinkActive="active">Programação</a>
-    <a routerLink="/gifts" routerLinkActive="active">Gifts</a>
-    <a routerLink="/parceiros" routerLinkActive="active">Parceiros</a>
-  </nav>
+  <div class="nav-container">
+    <button class="menu-toggle" (click)="toggleMenu()">☰</button>
+    <nav [class.active]="menuActive">
+      <a routerLink="/home" routerLinkActive="active">Home</a>
+      <a routerLink="/inspiracao" routerLinkActive="active">Inspiração</a>
+      <a routerLink="/programacao" routerLinkActive="active">Programação</a>
+      <a routerLink="/gifts" routerLinkActive="active">Gifts</a>
+      <a routerLink="/parceiros" routerLinkActive="active">Parceiros</a>
+    </nav>
+  </div>
   <div class="content">
     <router-outlet></router-outlet>
   </div>

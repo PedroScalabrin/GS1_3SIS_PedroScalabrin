@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./parceiros.component.css']
 })
 export class ParceirosComponent {
-  logoIBM = 'assets/ibm-logo.png';
+  logoIBM = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFRWT-hcJ-f4BG_ugvMwfcUCMKFsfCaC3kaw&s';
 }
